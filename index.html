@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +8,41 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    
+    <header>
+
+    </header>
+
+    <main class="container mx-auto px-8 md:px-16 lg:px-24">
+        <!-- section container-->
+        <section class="flex flex-col lg:flex-row">
+            <!-- Geometry Shape Container-->
+            <div class="flex-1 grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                <!-- Triangle Card -->
+                <div class="card w-96 bg-base-100 shadow-xl">
+                    <figure><img src="/images/triangle.png" alt="Triangle" /></figure>
+                    <div class="card-body text-center">
+                      <h2 class="text-2xl font-semibold">Triangle</h2>
+                      <p class="font-medium text-[#414141] mb-3"> Area (A) = 0.5 x b x h </p>
+                      <div class="inline space-x-3">
+                        <input type="text" class="bg-[#F1F1F1] w-20 border px-3 rounded-md " id="base-field" placeholder="b"> <span> cm </span>
+                        <input type="text" class="bg-[#F1F1F1] w-20 border px-3 rounded-md" id="height-field" placeholder="h"> <span> cm </span>
+                      </div>
+                      
+                      <div class="card-actions">
+                        <button onclick="calculateTriangleArea()" id="calculate-btn" class="btn btn-primary bg-[#1090D8] w-full mt-3">Calculate</button>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Geometry Area Calculation Container -->
+            <div class="rounded-lg border border-1-[#1111111a] shadow-lg py-5 px-24">
+                <div class="text-2xl underline">Area Calculation</div>
+                <p class="text-lg">Triange Area: <span id="area-show">00</span></p>
+            </div>
+        </section>
+    </main>
+
+    <script src="./js/geometry.js"></script>
 </body>
 </html>
